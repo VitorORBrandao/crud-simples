@@ -22,10 +22,20 @@ const MenuLateral = ({ routes }: MenuLateralProps) => {
             route.isVisible &&
             (route.permission ? (
               token?.permissions.includes(route.permission) && (
-                <Item key={index} name={route.name} path={route.path} />
+                <Item
+                  key={index}
+                  name={route.name}
+                  icon={route.icon}
+                  path={route.path}
+                />
               )
             ) : (
-              <Item key={index} name={route.name} path={route.path} />
+              <Item
+                key={index}
+                name={route.name}
+                icon={route.icon}
+                path={route.path}
+              />
             ))
         )}
       </Lista>

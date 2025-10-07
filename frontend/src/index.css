@@ -1,1 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap");
+
 @import "tailwindcss";
+
+@theme inline {
+  --font-roboto: "Roboto", sans-serif;
+  --font-noto: "Noto Sans", sans-serif;
+}
+
+@layer utilities {
+  .font-roboto {
+    font-family: var(--font-roboto);
+  }
+
+  .font-noto {
+    font-family: var(--font-noto);
+  }
+}

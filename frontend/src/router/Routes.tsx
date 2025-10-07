@@ -1,3 +1,8 @@
+import {
+  PiChartBarFill,
+  PiClipboardTextBold,
+  PiPiggyBankBold,
+} from "react-icons/pi";
 import { DashboardPage } from "../pages/Dashboard";
 import { EstoquePage } from "../pages/Estoque";
 import { FinanceiroPage } from "../pages/Financeiro";
@@ -9,6 +14,7 @@ export const routes: AppRoute[] = [
   {
     index: true,
     element: <DashboardPage />,
+    icon: <PiChartBarFill />,
     name: "Dashboard",
     hasMenu: true,
     isProtected: true,
@@ -27,6 +33,7 @@ export const routes: AppRoute[] = [
   {
     path: "/estoque",
     element: <EstoquePage />,
+    icon: <PiClipboardTextBold />,
     name: "Estoque",
     hasMenu: true,
     isProtected: true,
@@ -36,6 +43,7 @@ export const routes: AppRoute[] = [
   {
     path: "/financeiro",
     element: <FinanceiroPage />,
+    icon: <PiPiggyBankBold />,
     name: "Financeiro",
     hasMenu: true,
     isProtected: true,

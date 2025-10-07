@@ -1,9 +1,10 @@
 import type { JSX } from "react";
 
 export type AppRoute = {
+  element: JSX.Element;
   path?: string;
   index?: boolean;
-  element: JSX.Element;
+  icon?: JSX.Element;
   name?: string;
   hasMenu?: boolean;
   isProtected?: boolean;
