@@ -9,7 +9,7 @@ type Props = {
   table: any;
 };
 
-const Pagincacao = ({ table }: Props) => {
+const Paginacao = ({ table }: Props) => {
   return (
     <div id="pagination" className="p-6 border-t border-gray-300">
       <div className="flex items-center justify-between">
@@ -83,4 +83,4 @@ const Pagincacao = ({ table }: Props) => {
   );
 };
 
-export default Pagincacao;
+export default Paginacao;

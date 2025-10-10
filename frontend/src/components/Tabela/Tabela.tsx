@@ -5,7 +5,7 @@ import {
   useReactTable,
 } from "@tanstack/react-table";
 import useConfiguracaoColunas from "./ConfigaracaoColunas";
-import Pagincacao from "./Pagincacao";
+import Paginacao from "./Paginacao";
 import type { produtosEstoque } from "../../types/produtosEstoque.types";
 
 export const Tabela = ({ data }: { data: produtosEstoque[] }) => {
@@ -58,7 +58,7 @@ export const Tabela = ({ data }: { data: produtosEstoque[] }) => {
           ))}
         </tbody>
       </table>
-      <Pagincacao table={table} />
+      <Paginacao table={table} />
     </div>
   );
 };

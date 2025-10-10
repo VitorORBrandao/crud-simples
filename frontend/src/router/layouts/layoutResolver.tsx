@@ -9,23 +9,15 @@ export function resolveLayout(route: AppRoute, routes: AppRoute[]) {
   if (hasMenu && isProtected) {
     return (
       <ProtectedLayout permission={permission}>
-        <MenuLayout routes={routes}/>
+        <MenuLayout routes={routes} />
         {element}
       </ProtectedLayout>
-    )
+    );
   } else if (hasMenu) {
-    return (
-      <MenuLayout routes={routes} />
-    );
+    return <MenuLayout routes={routes} />;
   } else if (isProtected) {
-    return (
-      <ProtectedLayout
-        permission={permission}
-      >
-        {element}
-      </ProtectedLayout>
-    );
+    return <ProtectedLayout permission={permission}>{element}</ProtectedLayout>;
   }
 
-  return <PlainLayout permission={permission}>{element}</PlainLayout>;
+  return <PlainLayout>{element}</PlainLayout>;
 }

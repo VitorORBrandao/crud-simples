@@ -23,7 +23,6 @@ export const routes: AppRoute[] = [
   },
   {
     path: "/login",
-    index: false,
     element: <LoginPage />,
     name: "Login",
     hasMenu: false,
