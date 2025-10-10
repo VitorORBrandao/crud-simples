@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import { RouterProvider } from "react-router/dom";
 import { AuthProvider } from "./contexts/AuthContext.tsx";
 import "./index.css";
-import { router } from "./router/Router.tsx";
+import { router } from "./routes/Router.tsx";
 
 const queryClient = new QueryClient();
 
