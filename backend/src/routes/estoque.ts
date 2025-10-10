@@ -4,9 +4,9 @@ import * as controller from "../controllers/estoque.controller";
 const router = Router();
 
 router.get("/", controller.getAll);
-router.get("/:id", controller.getById);
+router.get("/", controller.getById);
 // router.post("/", controller.create);
-// router.patch("/:id", controller.update);
-// router.delete("/:id", controller.delete);
+// router.patch("/", controller.update);
+// router.delete("/", controller.delete);
 
 export default router;

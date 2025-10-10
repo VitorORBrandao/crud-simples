@@ -810,7 +810,7 @@ export const getAll = async (req: Request, res: Response) => {
 
 export const getById = async (req: Request, res: Response) => {
   try {
-    const { id } = req.params;
+    const { id } = req.query;
     const estoques = [
     {
       id: 1,
