@@ -1,9 +1,12 @@
 import { FiSearch } from "react-icons/fi";
 import { PiPlus } from "react-icons/pi";
-import { QueryComponent } from "../components/QueryComponent";
-import { useGetEstoque } from "../service/estoque.service";
+import { QueryBoundary } from "../components/QueryComponent";
+import { Tabela } from "@/components/Tabela/Tabela";
+import { useEstoqueQuery } from "@/hooks/useEstoqueQuery";
 
 export const EstoquePage = () => {
+  const { data, isLoading, isError, error } = useEstoqueQuery();
+
   return (
     <div className="w-full h-full flex items-center justify-center p-8">
       <main className="w-full h-full bg-white flex flex-col rounded-lg border border-gray-300">
@@ -23,8 +26,15 @@ export const EstoquePage = () => {
             <PiPlus size={24} />
           </button>
         </div>
-
-        <QueryComponent queryFunction={useGetEstoque} />
+        <QueryBoundary
+          data={data}
+          isLoading={isLoading}
+          isError={isError}
+          error={error}
+          emptyState={<p>Nenhum item no estoque.</p>}
+        >
+          {(data) => <Tabela data={data} />}
+        </QueryBoundary>
       </main>
     </div>
   );

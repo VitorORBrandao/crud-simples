@@ -5,5 +5,5 @@ export type produtosEstoque = {
   cue: number;
   mpm: number;
   preco: number;
-  porcentual_lucro?: number;
+  porcentual_lucro: number;
 };

@@ -3,7 +3,9 @@ import { useMemo } from "react";
 import { PiEye, PiPencil, PiTrash } from "react-icons/pi";
 import type { produtosEstoque } from "../../types/produtosEstoque.types";
 
-const useConfiguracaoColunas = (): ColumnDef<produtosEstoque>[] => {
+const useConfiguracaoColunas = (): ColumnDef<
+  Omit<produtosEstoque, "porcentual_lucro">
+>[] => {
   return useMemo(
     () => [
       // {
@@ -114,7 +116,7 @@ const useConfiguracaoColunas = (): ColumnDef<produtosEstoque>[] => {
         header: "Ações",
         id: "acoes",
         // size: 100,
-        cell: (info) => (
+        cell: () => (
           <div className="flex justify-center items-center gap-2">
             <button className="text-neutral-400 text-xl cursor-pointer hover:text-blue-500">
               <PiEye />

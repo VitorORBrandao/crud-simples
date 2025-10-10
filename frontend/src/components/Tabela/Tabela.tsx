@@ -8,7 +8,11 @@ import useConfiguracaoColunas from "./ConfigaracaoColunas";
 import Paginacao from "./Paginacao";
 import type { produtosEstoque } from "../../types/produtosEstoque.types";
 
-export const Tabela = ({ data }: { data: produtosEstoque[] }) => {
+export const Tabela = ({
+  data,
+}: {
+  data: Omit<produtosEstoque, "porcentual_lucro">[];
+}) => {
   const columns = useConfiguracaoColunas();
   const table = useReactTable({
     data,

@@ -1,7 +1,7 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createRoot } from "react-dom/client";
 import { RouterProvider } from "react-router/dom";
-import { AuthProvider } from "./context/AuthContext.tsx";
+import { AuthProvider } from "./contexts/AuthContext.tsx";
 import "./index.css";
 import { router } from "./router/Router.tsx";
 
